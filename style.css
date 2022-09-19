@@ -1,0 +1,952 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFFFFF;
+    --offWhite: #FFFFFF80;
+    --brown: #CF9024;
+    --green: #028000;
+    --lightGreen: #4DFC4B;
+    --ash1: #707070;
+    --ash2: #DFDFDF;
+    --black: #000000;
+    --black1: #090909;
+    --black2: #171717;
+    --skyBlueLike: #D4E1E1;
+    --darkRed: #570B00;
+    --spiceColor: #D6D0D0;
+    --defaultPadding: 1% 10%;
+    --mainFontFamily: 'Montserrat', sans-serif;
+}
+
+/* =============== universal styles ================ */
+.green {
+    color: var(--green);
+}
+
+.black {
+    color: var(--black);
+}
+
+.brown {
+    color: var(--brown);
+}
+
+.white {
+    color: var(--white);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* =============== universal styles end ================ */
+
+/* =============== header section style ================ */
+/*======= toggler =========*/
+/* .top-nav.open {
+    top: 0;
+    border-radius: initial;
+}
+
+.menu-toggler {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+}
+
+.menu-toggler.open {
+    transform: rotate(-45deg);
+}
+
+.bar {
+    background: linear-gradient(to right, var(--green), var(--red));
+    width: 100%;
+    height: 4px;
+    border-radius: .8rem;
+}
+
+.bar.half {
+    width: 50%;
+}
+
+.bar.start {
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.start {
+    transform: rotate(-450deg) translateX(.8rem);
+}
+
+.bar.end {
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.end {
+    transform: rotate(-450deg) translateX(-.8rem);
+} */
+
+
+
+
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    z-index: 80;
+    box-shadow: 1px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--defaultPadding);
+    font-family: var(--mainFontFamily);
+}
+
+.navList {
+    list-style: none;
+}
+
+.listItems {
+    display: inline;
+    margin-right: 15px;
+}
+
+.navLinks {
+    text-decoration: none;
+    color: var(--black1);
+    font-size: 1.1rem;
+}
+
+.donateBtn {
+    border: 0;
+    outline: none;
+    background-color: var(--brown);
+    color: var(--white);
+    padding: .65rem 3rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* ================== header section ends ================= */
+
+
+/* ================== intro section start ================= */
+.intro {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: url(img/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: 100% 0%;
+    display: flex;
+    align-items: center;
+    padding: var(--defaultPadding);
+}
+
+.box1,
+.box2 {
+    flex: 1;
+}
+
+.box1 h1 {
+    color: var(--offWhite);
+    font-family: 'playfair display', verdana;
+    font-size: 2.3rem;
+    margin-bottom: 5%;
+    line-height: 1.2;
+    text-shadow: 1px 2px 10px var(--ash1);
+}
+
+.box1 p {
+    width: 80%;
+    color: var(--ash1);
+    font-size: 1.2rem;
+
+}
+
+.dBlock {
+    display: block;
+}
+
+/* ============ intro end ================= */
+
+/* ============ lazarus project cards ================= */
+.cardContainer {
+    width: 100%;
+    margin-top: -6rem;
+    padding: var(--defaultPadding);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    gap: 15px;
+}
+
+.cardContainer .cards {
+    background-color: var(--skyBlueLike);
+    position: relative;
+}
+
+.card1,
+.card2,
+.card3 {
+    width: 100%;
+    height: 80%;
+}
+
+.card1 {
+    background-color: var(--brown);
+}
+
+.card2 {
+    background-color: var(--green);
+}
+
+.card3 {
+    background-color: var(--lightGreen);
+}
+
+.lazTitle {
+    text-align: center;
+    color: var(--green);
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ============ lazarus cards ends ================= */
+
+
+/* ============ video section ================= */
+.videoSection {
+    width: 100%;
+    padding: var(--defaultPadding);
+    margin: 8% auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    gap: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content .contentTitle {
+    color: var(--brown);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3.38px;
+}
+
+.content h1 {
+    color: var(--green);
+    font-size: 800;
+    font-size: 2rem;
+    line-height: 1;
+    margin: 3% 0;
+}
+
+.content .firstContentPara {
+    width: 80%;
+}
+
+.contentSecond {
+    display: flex;
+
+}
+
+.contentSecond .roundBox {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--brown);
+    border-radius: 100%;
+}
+
+.paddingRight {
+    padding-right: 4%;
+}
+
+.projL {
+    margin: 7% 0 8%;
+    color: var(--green);
+    font-size: 16px;
+}
+
+.video {
+    width: 100%;
+}
+
+.video .videoImage {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ============ video section ends ================= */
+
+
+/* ============ volunteer section ================= */
+.volunteerSection {
+    background-image: url(./img/greenbg.jpg);
+    padding: var(--defaultPadding);
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.volunteerSection::after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: var(--green);
+    opacity: 0.7;
+}
+
+.vol-contents {
+    z-index: 5;
+}
+
+.be-vol {
+    padding-top: 5%;
+    font-size: 2.7rem;
+    color: var(--brown);
+    text-align: center;
+}
+
+.vol-p {
+    color: var(--white);
+    font-size: 0.8rem;
+    margin: 3% 0 7%;
+    text-align: center;
+}
+
+.vol-input {
+    width: 600px;
+    display: block;
+    padding: 10px 10px;
+    outline: none;
+}
+
+.btn-wrapper {
+    padding-top: 8%;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: fit-content;
+    border: 0;
+    color: var(--white);
+    background: var(--brown);
+    padding: 1rem 4rem;
+    cursor: pointer;
+}
+
+/* ============ volunteer section end ================= */
+
+/* ============ performance section ================= */
+.performanceSection {
+    width: 100%;
+    height: 50rem;
+    padding: 10rem;
+    background-color: var(--white);
+    display: flex;
+}
+
+.performLeft {
+    flex: 1;
+}
+
+.performLeft img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.performRight {
+    flex: 1;
+    padding-left: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.performRight h3 {
+    padding: 3% 0;
+    font-size: 2rem;
+}
+
+.container {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+}
+
+.skill-box {
+    width: 100%;
+    margin: 25px 0;
+}
+
+.skill-box .title {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--green);
+}
+
+.skill-box .skill-bar {
+    width: 100%;
+    height: 8px;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.skill-bar .skill-per {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 98%;
+    border-radius: 6px;
+    background: var(--brown);
+    animation: progress 0.4s ease-in-out forwards;
+    /* opacity: 0; */
+}
+
+.skill-per.education {
+    width: 80%;
+}
+
+.skill-per.employment {
+    width: 60%;
+}
+
+.skill-per.health {
+    width: 90%;
+}
+
+.skill-per .tooltip {
+    position: absolute;
+    right: -14px;
+    top: -20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+    padding: 2px 6px;
+    z-index: 1;
+}
+
+/* .tooltip::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: #4070f4;
+    transform: translateX(-50%) rotate(45deg);
+} */
+
+/* ============ performance section ends ================= */
+
+/* ============ quick donation section ================= */
+.quick__donation {
+    width: 100%;
+    height: 20rem;
+    background: url(./img/iboro4.jpg);
+    background-position: right 40% top 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+
+.quick__donation::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--brown);
+    opacity: 0.8;
+    z-index: 1;
+
+}
+
+.donation__container {
+    z-index: 5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--green);
+    display: flex;
+    justify-content: space-between;
+    padding: 2.2% 10%;
+    height: 4rem;
+    align-items: center;
+}
+
+.donation__container h3 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.donation__container button {
+    border: 1px solid var(--brown);
+    width: fit-content;
+    padding: .6rem 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--brown);
+    font-weight: 600;
+    font-size: 1.2rem;
+
+}
+
+.donation__container button.quick_donate_btn {
+    background-color: var(--brown);
+    color: var(--white);
+    font-weight: 400;
+    font-size: .8rem;
+    margin-left: 1rem;
+    padding: .8rem 2.8rem;
+}
+
+/* ============ quick donation end ================= */
+
+/* ============ latest article section ================= */
+.articles {
+    background-color: var(--white);
+    width: 100%;
+    height: 30rem;
+    padding: 10% 10% 50% 10%;
+}
+
+.articles_title {
+    text-align: center;
+    color: var(--green);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.art_para {
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.article_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .7rem;
+}
+
+.article .imgBox {
+    width: 100%;
+    height: 12rem;
+    background-color: var(--brown);
+}
+
+.article_contents {
+    border: 1px solid var(--ash1);
+    border-top: none;
+    padding: 0 3% 4%;
+}
+
+.article_contents h4 {
+    color: var(--green);
+    padding-top: 3%;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.article_contents p {
+    font-size: .9rem;
+    line-height: 1.5;
+    padding: 5% 0;
+}
+
+.article_contents a {
+    text-decoration: none;
+    color: var(--brown);
+}
+
+/* ============ latest article end ================= */
+
+
+/* ============ message from Iboro section ================= */
+.message {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+}
+
+.message_image {
+    flex: 1;
+    background-color: rgba(184, 173, 78, 0.753);
+}
+
+.message_content {
+    flex: 1;
+    background-color: var(--green);
+}
+
+/* ============ message from Iboro ends ================= */
+
+
+/* ============ empty section ================= */
+.empty {
+    width: 100%;
+    height: 30rem;
+}
+
+/* ============ empty section ends ================= */
+
+
+/* ============ footer section ================= */
+footer {
+    background-color: var(--green);
+    width: 100%;
+    height: auto;
+    padding: 5% 10%;
+    display: flex;
+    gap: 5rem;
+    color: var(--offWhite);
+}
+
+.iboro {
+    flex: 2;
+}
+
+.help_link,
+.address,
+.legal {
+    flex: 1;
+}
+
+.footer_headings {
+    color: var(--white);
+    padding-bottom: 15%;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.legal h5,
+.help_link h5 {
+    padding-bottom: 4%;
+}
+
+.legal h5 a,
+.help_link h5 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ============ footer section ends ================= */
+
+
+
+/*Start media queries*/
+
+/* @media screen and (max-width: 768px) {
+    header {
+        height: 100vh;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .listItems {
+        display: block;
+        margin: 2rem 0;
+    }
+
+    .nav-link {
+        font-size: 4.5rem;
+    }
+
+    .about-heading h1 {
+        font-size: 8rem;
+    }
+
+    .section-heading h1 {
+        font-size: 3rem;
+    }
+
+    .about-details .nav-list {
+        flex-direction: initial;
+    }
+
+    .about-details li {
+        margin: 0 2rem;
+    }
+
+    .icon-container {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .icon-container i {
+        font-size: 4rem;
+    }
+
+    .timeline ul {
+        margin: 0 0 0 auto;
+    }
+
+    .timeline .date::before {
+        left: -20rem;
+    }
+
+    .timeline .date::after {
+        left: -5.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-toggler {
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .landing-text h1 {
+        font-size: 8rem;
+    }
+
+    .landing-text h6 {
+        font-size: 1.4rem;
+    }
+
+    .nav-link {
+        font-size: 3.5rem;
+    }
+
+    .about .container {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        margin: 0 0 7rem 0;
+    }
+
+    .portfolio-item {
+        flex-direction: column;
+    }
+
+    .portfolio-img {
+        margin: 0 0 2rem 0;
+        order: 1;
+    }
+
+    .portfolio-description {
+        margin: 0;
+        order: 2;
+    }
+
+    .timeline p {
+        font-size: 1.6rem;
+    }
+
+    .timeline .date::before {
+        font-size: 1.4rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .up {
+        right: 2rem;
+    }
+}
+
+@media screen and (max-width: 580px) {}
+
+@media screen and (max-width: 400px) {
+    .nav-link {
+        font-size: 1rem;
+        padding: .4rem;
+    }
+
+    li {
+        margin: 0 .5rem;
+    }
+
+    .members-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .section-heading h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-heading h6 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-description h6 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-top: -1rem;
+    }
+
+    .portfolio-description h1 {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-description .cta {
+        margin-top: 1rem;
+        font-size: .9rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .landing-text {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .landing-text h1 {
+        font-size: 5rem;
+        padding: 1rem;
+    }
+
+    .landing-text h6 {
+        font-size: 1.2rem;
+    }
+
+    .menu-toggler {
+        top: 1rem;
+        right: 1rem;
+        width: 2.5rem;
+        height: 2rem;
+    }
+
+    header {
+        height: 80vh;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    .top-nav {
+        width: 100%;
+        height: 20vh;
+        position: fixed;
+        top: -100vh;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        background: linear-gradient(135deg, #06581f 0%, #640404 25%, #101010 50%, #0645 75%, #06581f 100%), url('images/map.jpg') center no-repeat;
+    }
+
+    .about-heading {
+        margin-bottom: 3rem;
+    }
+
+    .about-heading h1 {
+        font-size: 3rem;
+    }
+
+    .about-heading h6 {
+        font-size: .8rem;
+        font-weight: 200;
+    }
+
+    .about-details p {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+    }
+
+    .social-media {
+        margin-top: 1rem;
+    }
+
+    .social-media i {
+        font-size: 1.2rem;
+        transition: color 650ms;
+    }
+
+    .icon-container {
+        width: 5rem;
+        height: 5rem;
+        border: 2px solid var(--green);
+        margin-bottom: .5rem;
+    }
+
+    .icon-container i {
+        font-size: 2.5rem;
+    }
+
+    .timeline .date::before {
+        content: attr(data-date);
+        left: -19.5rem;
+        text-align: right;
+        min-width: 12rem;
+        font-size: 1.5rem;
+    }
+
+    .timeline .date::after {
+        left: -6.3rem;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+} */
+
+
+/*End media queries*/
