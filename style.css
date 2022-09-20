@@ -22,6 +22,11 @@
     --mainFontFamily: 'Montserrat', sans-serif;
 }
 
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 /* =============== universal styles ================ */
 .green {
     color: var(--green);
@@ -50,63 +55,6 @@
 /* =============== universal styles end ================ */
 
 /* =============== header section style ================ */
-/*======= toggler =========*/
-/* .top-nav.open {
-    top: 0;
-    border-radius: initial;
-}
-
-.menu-toggler {
-    position: absolute;
-    top: 5rem;
-    right: 5rem;
-    width: 5rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 1500;
-    transition: transform 650ms ease-out;
-}
-
-.menu-toggler.open {
-    transform: rotate(-45deg);
-}
-
-.bar {
-    background: linear-gradient(to right, var(--green), var(--red));
-    width: 100%;
-    height: 4px;
-    border-radius: .8rem;
-}
-
-.bar.half {
-    width: 50%;
-}
-
-.bar.start {
-    transform-origin: right;
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
-.open .bar.start {
-    transform: rotate(-450deg) translateX(.8rem);
-}
-
-.bar.end {
-    align-self: flex-end;
-    transform-origin: left;
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
-.open .bar.end {
-    transform: rotate(-450deg) translateX(-.8rem);
-} */
-
-
-
-
 
 header {
     width: 100%;
@@ -186,7 +134,6 @@ header {
     width: 80%;
     color: var(--ash1);
     font-size: 1.2rem;
-
 }
 
 .dBlock {
@@ -268,7 +215,7 @@ header {
 
 .content h1 {
     color: var(--green);
-    font-size: 800;
+    font-weight: 800;
     font-size: 2rem;
     line-height: 1;
     margin: 3% 0;
@@ -280,7 +227,6 @@ header {
 
 .contentSecond {
     display: flex;
-
 }
 
 .contentSecond .roundBox {
@@ -474,6 +420,7 @@ header {
     padding: 2px 6px;
     z-index: 1;
 }
+
 /* ============ performance section ends ================= */
 
 
@@ -679,13 +626,24 @@ footer {
 /*Start media queries*/
 
 /* =================== tablets ================== */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+    .intro {
+        background-position: 10% 50%;
+    }
+    .box2 {
+        display: none;
+    }
+    .cardContainer {
+        margin-top: -6rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
     .performanceSection {
         height: auto;
         padding: 10%;
         display: grid;
         grid-template-columns: 1fr;
     }
+
     .pol-heading {
         padding-top: 5%;
     }
@@ -693,36 +651,50 @@ footer {
     .performRight h3 {
         font-size: 1.5rem;
     }
+
     .donation__container {
-        background-color: var(--green);
-        flex-direction: column;
         height: 100%;
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: .5rem;
+        flex-wrap: wrap;
+        position: relative;
     }
+
     .donation__container h3 {
         font-size: 1rem;
     }
+
     .donation__container button {
         font-size: 0.8rem;
         padding: .5rem 1.8rem;
     }
+
     .donation__container button.quick_donate_btn {
         margin-left: 0;
+        position: absolute;
+        right: 40%;
+        bottom: 10%;
     }
+
     .articles {
         height: auto;
         padding-bottom: 10%;
     }
-    .article_container{
+
+    .article_container {
         grid-template-columns: 1fr;
     }
+
     .message {
         height: 20rem;
-       flex-direction: column;
+        flex-direction: column;
     }
+
     .empty {
         height: 20rem;
     }
+
     footer {
         margin: 0 auto;
         display: grid;
@@ -733,7 +705,67 @@ footer {
 
 
 /* =================== phones ================ */
-@media screen and (max-width: 600px) {  
+@media screen and (max-width: 600px) {
+    .intro {
+        background-position: 100% 0%;
+    }
+    .box1 h1 {
+        font-size: 1.8rem;
+    }
+    .dBlock {
+        display: inline;
+    }
+    
+    .box1 p {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .box2 {
+        display: none;
+    }
+    .cardContainer {
+        margin-top: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .videoSection {
+        margin: 8% auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .content h1 {
+        font-size: 1.8rem;
+    }
+    .contentSecond {
+        margin-top: 6%;
+    }
+    .be-vol {
+        padding-top: 5%;
+        font-size: 1.7rem;
+    }
+    .vol-input {
+        width: 90%;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    .btn {
+        padding: .8rem 3rem;
+    }
+    .donation__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        height: 100%;
+        gap: 1rem;
+        padding: 10%;
+    }
+    .donation__container button.quick_donate_btn {
+        margin-left: 0;
+        position: static;
+    }
     footer {
         display: flex;
         flex-direction: column;
@@ -741,11 +773,17 @@ footer {
         align-items: center;
         gap: 2rem;
     }
+
     .footer_logo {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 5%;
+    }
+
+    .help_link,
+    .legal {
+        text-align: center;
     }
 
     .address {
