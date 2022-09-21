@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
@@ -16,11 +17,11 @@
 <body>
     <!--header section start-->
     <header>
-        <div class="menu-toggler">
+        <!-- <div class="menu-toggler">
             <div class="bar half start"></div>
             <div class="bar"></div>
             <div class="bar half end"></div>
-        </div>
+        </div> -->
         <nav class="nav">
             <a href="index.html">
                 <img src="img/logo.PNG" alt="logo" class="logo">
@@ -33,6 +34,12 @@
                 <li class="listItems"><a href="contact.html" class="navLinks">Contact</a></li>
             </ul>
             <button class="donateBtn">Donate</button>
+            <button id="open-menu-btn" class="navBTN">
+                <i class="uil uil-bars"></i>
+            </button>
+            <button id="close-menu-btn" class="navBTN">
+                <i class="uil uil-multiply"></i>
+            </button>
         </nav>
     </header>
     <!--header section end-->
@@ -279,6 +286,8 @@
         </div>
     </footer>
     <!--footer section ends-->
+
+    <script src="index.js"></script>
 </body>
 
 </html>
